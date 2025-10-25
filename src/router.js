@@ -1,15 +1,13 @@
 const express = require('express');
 const router = express.Router(); 
+const controllerUsuarios = require ('./controllers/controllerUsuarios');
 
-const controllerUsers = require('./Controllers/controllerUsers'); 
 
-// crud usuarios basicao completo
-// concluido na quarta feira 
-router.post('/register', controllerUsers.RegisterUser);
-router.get('/listUsers' , controllerUsers.listUsuario);
-router.get('/users/:id' , controllerUsers.listUserId);
-router.put('/users/:id', controllerUsers.updateUser);
-router.delete('/delete/:id' , controllerUsers.deleteUser)
+
+router.post('/cadastro' , controllerUsuarios.addUsuario);
+router.get('/buscar-usuario' , controllerUsuarios.listUsuarios);
+router.get('/usuario' , controllerUsuarios.getUsuario);
+router.post(`/updateUsuario`, controllerUsuarios.updateUsuario);
 
 
 module.exports = router;
