@@ -140,5 +140,5 @@ distância
 
 # SvelteKit constrói / gera saída
 .svelte-kit
-
+node_modules/
 # Fim de https://www.toptal.com/developers/gitignore/api/node
